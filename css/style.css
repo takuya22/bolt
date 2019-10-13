@@ -1,0 +1,284 @@
+body {
+  font-family: Lato,Raleway;
+}
+
+.inner {
+  width: 1100px;
+  margin: auto;
+}
+
+.bolt-icon::before {
+	content: '\f0e7';
+	font-family:'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.bolt-icon {
+  display: inline-block;
+  margin: 15px 0px;
+}
+
+.bars__icon::before {
+  display: none;
+}
+
+.contact-btn {
+  background-color: #74cfae;
+  color: #fff;
+  font-size: 12px;
+  padding: 14px 12px;
+  margin: 15px 0px;
+  cursor: pointer;
+  float: right;
+}
+.contact-btn:hover {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.title {
+  background-color: #f2f2f2;
+}
+
+.title__container {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+.title__theme {
+  font-size: 90px;
+  font-weight: 700;
+  color: #74cfae;
+}
+
+.title__containts {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #c0c0c0;
+}
+
+.subsection {
+  background-color: #74cfae;
+  padding-top: 50px;
+}
+
+.iphone-image {
+  float: left;
+  margin-left: 150px;
+}
+
+.subsection__container {
+  text-align: center;
+  width: 650px;
+  float: left;
+  margin-left: 50px;
+  color: #fff;
+}
+
+.subsection__container > h2{
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.subsection__container > p{
+  font-size: 20px;
+  margin-top: 35px;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+.section__clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.work__section {
+  background-color: #f2f2f2;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.work__table > h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.work__image {
+  float: left;
+}
+.work__image:nth-child(3n+1){
+  margin-right: 100px;
+  margin-bottom: 80px;
+}
+.work__image:nth-child(3n+2){
+  margin-right: 100px;
+  margin-bottom: 80px;
+}
+.work__image__clearfix{
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.work__image__clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.work__image__animation{
+  opacity: 0.7;
+}
+.work__image__animation:hover{
+  opacity: 1;
+  transform: 0.3;
+}
+
+.work__sentence {
+  text-align: center;
+  font-size: 18px;
+  width: 500px;
+  font-weight: 100;
+  float: left;
+}
+.mail-btn{
+  display: inline-block;
+  background-color: #74cfae;
+  font-size: 12px;
+  padding: 14px 20px;
+  margin-left: 90px;
+  color: #fff;
+  cursor: pointer;
+}
+.mail-btn:hover {
+  color: #333;
+  transition: color 0.3s;
+}
+.sentence__clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.sentence__clearfix{
+  width: 685px;
+  margin: auto;
+}
+
+.skill__section {
+  background-color: #4e4e4e;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+.skill__section > .inner > h3 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.skill__image {
+  float: left;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.skill__image:first-of-type{
+  margin-left: 30px;
+}
+.skill__image:last-of-type{
+  margin-right: 30px;
+}
+.skill__image > p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #fff;
+}
+.skill__clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sns__link {
+  background-color: #f2f2f2;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.fa-facebook-f {
+  font-size: 40px;
+}
+
+.fa-dribbble {
+  font-size: 40px;
+}
+
+.fa-twitter {
+  font-size: 40px;
+}
+
+.fa-envelope {
+  font-size: 40px;
+}
+.sns__container {
+  margin: auto;
+  width: 740px;
+}
+.sns__button {
+  width: 185px;
+  height: 100px;
+  line-height: 100px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+}
+.sns__button:hover {
+  background-color: #fff;
+  transform: 0.3;
+}
+
+.sns__icon {
+  color: #74cfae;
+}
+.sns__clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  background-color: #74cfae;
+  color: #fff;
+  text-align: right;
+}
+
+@media screen and (max-width:1199px) {
+  .inner{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner{
+    width: 90%;
+  }
+
+  .contact-btn{
+    display: none;
+  }
+
+  .bars__icon::before{
+    display: block;
+    font-size: 40px;
+    color: #c0c0c0;
+  }
+  .bars__icon{
+    float: right;
+    margin: 15px 0px;
+    padding: 0px 10px;
+    border: solid 0.5px #c0c0c0;
+    border-radius: 10%;
+  }
+}
