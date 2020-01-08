@@ -6,6 +6,14 @@
   clear: both;
 }
 
+.body {
+  font-family: Lato;
+}
+
+.Raleway {
+  font-family: Raleway;
+}
+
 .inner {
   width: 1100px;
   margin: 0 auto;
@@ -13,23 +21,17 @@
 
 .header {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .header-inner {
   box-sizing: border-box;
-  position: relative;
   padding: 15px;
-  height: 70px;
 }
 
-.bolt-icon {
-  position: absolute;
-  left: 50px;
-}
-
-.bolt-icon::before {
-	content: '\f0e7';
-	font-family:'Font Awesome 5 Free';
+.fa-bolt {
   font-weight: 900;
   font-size: 40px;
 }
@@ -37,12 +39,12 @@
 .contact-btn {
   background-color: #74cfae;
   color: #fff;
-  cursor: pointer;
   display: block;
   font-size: 12px;
+  font-weight: 500;
+  float: right;
   padding: 14px 12px;
-  position: absolute;
-  right: 50px;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -52,13 +54,15 @@
 
 .theme {
   background-color: #f2f2f2;
+}
+
+.theme-inner {
   padding: 250px 0;
 }
 
 .main-theme {
   color: #74cfae;
   font-size: 90px;
-  font-family: Raleway;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
@@ -67,7 +71,6 @@
 .theme-text {
   color: #c0c0c0;
   font-size: 30px;
-  font-family: Raleway;
   font-weight: 300;
   text-align: center;
 }
@@ -83,34 +86,29 @@
   position: relative;
 }
 
-.iphone-image {
-  left: 100px;
-  position: absolute;
+.text-flexbox {
+  display: flex;
+  justify-content: space-around;
 }
 
 .text-area {
-  position: absolute;
   width: 680px;
-  right: 50px;
-  top: 50px;
 }
 
 .main_text {
   color: #fff;
-  font-family: Raleway;
   font-size: 24px;
   font-weight: 300;
-  margin-bottom: 35px;
   margin-top: 10px;
   text-align: center;
 }
 
 .sub_text {
   color: #fff;
-  font-family: Raleway;
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -120,22 +118,15 @@
 
 .work-content-inner {
   box-sizing: border-box;
-  position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
 .work-content-title {
   color: #4e4e4e;
-  font-family: Raleway;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 40px;
-  text-align: center;
-}
-
-.work-content-container {
-  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -144,8 +135,8 @@
   display: block;
   float: left;
   opacity: 0.7;
-  margin-right: 100px;
-  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-top: 80px;
   transition: 0.3s;
 }
 
@@ -153,24 +144,26 @@
   opacity: 1.0;
 }
 
-.work-img:nth-child(3n) {
-  margin-right: 0;
+.work-img:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.work-img:not(:nth-child(n+4)) {
+  margin-top: 0;
 }
 
 .work-content-bottom {
-  display: table;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
+  margin-top: 90px;
 }
 
 .work-content-text {
   color: #4e4e4e;
-  display: table-cell;
-  float: left;
-  font-family: Lato;
   font-weight: 300;
   padding-right: 90px;
   text-align: center;
-  width: 500px;
 }
 
 .mail-container {
@@ -181,13 +174,12 @@
 .mail-btn {
   background-color: #74cfae;
   color: #fff;
-  cursor: pointer;
   display: inline-block;
-  font-family: Lato;
   font-size: 12px;
   font-weight: 500;
   padding: 14px 20px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .mail-btn:hover {
@@ -207,26 +199,25 @@
 
 .skill-theme {
   color: #fff;
-  font-family: Lato;
   font-size: 24px;
   font-weight: 300;
-  margin-bottom: 70px;
   text-align: center;
 }
 
 .skill-container {
-  display: table;
   margin: 0 auto;
-}
-
-.skill-image {
-  display: table-cell;
-  padding-right: 180px;
+  margin-top: 70px;
   text-align: center;
 }
 
-.skill-image:last-child{
-  padding-right: 0;
+.skill-image {
+  display: inline-block;
+  margin-left: 180px;
+  text-align: center;
+}
+
+.skill-image:first-child{
+  margin-left: 0;
 }
 
 .circle {
@@ -237,7 +228,6 @@
 .skill-name {
   color: #fff;
   display: inline-block;
-  font-family: Lato;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -252,19 +242,18 @@
 }
 
 .icon-table {
-  display: table;
+  width: 740px;
   margin: auto;
 }
 
 .icon-btn {
+  float: left;
   background-color: #f2f2f2;
-  cursor: pointer;
-  display: table-cell;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 185px;
-  height: 120px;
   text-align: center;
   transition: 0.3s;
-  vertical-align: middle;
 }
 
 .icon-btn:hover {
@@ -289,8 +278,66 @@
 
 .footer-text {
   color: #f2f2f2;
-  font-family: Lato;
   font-size: 16px;
   font-weight: 500;
   text-align: end;
+}
+
+
+@media screen and (max-width:1199px) {
+  .inner{
+    width: 97%;
+  }
+
+  .text-content-inner {
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    height: 100%;
+  }
+
+  .iphone-image {
+    display: block;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .text-area {
+    position: static;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .work-img {
+    float: none;
+    font-size: 0;
+    margin: 0 auto;
+  }
+
+  .work-img:nth-child(3n+1) {
+    margin-top: 80px;
+  }
+
+  .work-content-bottom {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .work-content-text {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .mail-container {
+    display: block;
+  }
+
+  .mail-btn {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
 }
