@@ -37,6 +37,19 @@ body {
   font-size: 40px;
 }
 
+.fa-bars {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.hamburger-bottom {
+  display: none;
+  float: right;
+}
+
 .contact-btn {
   background-color: #74cfae;
   color: #fff;
@@ -131,7 +144,7 @@ body {
   margin-bottom: 40px;
   text-align: center;
 }
-
+/*
 .work-img {
   display: block;
   float: left;
@@ -148,10 +161,31 @@ body {
   margin-left: 0;
 }
 
-/* .work-img:not(:nth-child(n+4)) {
-  margin-top: 0;
-} */
 .work-img:nth-child(n+4) {
+  margin-bottom: 0;
+}
+*/
+.img-container {
+  float: left;
+  /* opacity: 0.7; */
+  margin: 0 0 80px 100px;
+  /* transition: 0.3s; */
+}
+
+.work-img {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.work-img:hover {
+  opacity: 1.0;
+}
+
+.img-container:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.img-container:nth-child(n+4) {
   margin-bottom: 0;
 }
 
@@ -207,13 +241,22 @@ body {
   text-align: center;
 }
 
-.skill-image {
+/* .skill-image {
   display: inline-block;
   margin-left: 180px;
   text-align: center;
 }
 
 .skill-image:first-child{
+  margin-left: 0;
+} */
+.skill-block {
+  display: inline-block;
+  margin-left: 180px;
+  text-align: center;
+}
+
+.skill-block:first-child{
   margin-left: 0;
 }
 
@@ -308,20 +351,22 @@ body {
     width: 100%;
   }
 
-  .work-img {
+  .img-container {
     float: none;
     font-size: 0;
     text-align: center;
     margin: 0;
   }
 
-  .work-img:nth-child(3n+1) {
+  .img-container:nth-child(3n+4) {
     margin-top: 80px;
   }
 
   .work-content-bottom {
+    display: block;
     width: 100%;
     margin-top: 80px;
+    text-align: center;
   }
 
   .work-content-text {
@@ -332,13 +377,59 @@ body {
 
   .mail-container {
     display: block;
+    margin-top: 40px;
   }
 
-  .mail-btn {
+  .skill-image {
+    display: inline-block;
+  }
+
+  .skill-block {
+    display: block;
+    margin: 88px auto 0;
     text-align: center;
+  }
+
+  .skill-block:first-child {
+    margin-top: 0;
   }
 
 }
 
 @media screen and (max-width: 767px) {
+
+  .contact-btn {
+    display: none;
+  }
+
+  .hamburger-bottom {
+    display: block;
+  }
+
+  .theme-inner {
+    padding:  160px 0 130px 0;
+  }
+
+  .main-theme {
+    margin-bottom: 20px;
+  }
+
+  .theme-text {
+    font-size: 30px;
+  }
+
+  .sns-inner {
+    padding: 50px 15px 200px 15px;
+  }
+
+  .icon-btn {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .icon-table {
+    width: 100%;
+  }
+
 }
