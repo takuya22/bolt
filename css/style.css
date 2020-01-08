@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 .clearfix::after {
   content: "";
   display: block;
@@ -52,6 +53,10 @@ body {
   color: #333;
 }
 
+.main {
+  padding-top: 70px;
+}
+
 .theme {
   background-color: #f2f2f2;
 }
@@ -82,7 +87,6 @@ body {
 .text-content-inner {
   box-sizing: border-box;
   padding-top: 50px;
-  position: relative;
 }
 
 .text-flexbox {
@@ -117,8 +121,7 @@ body {
 
 .work-content-inner {
   box-sizing: border-box;
-  padding-top: 60px;
-  padding-bottom: 70px;
+  padding: 60px 0 70px;
 }
 
 .work-content-title {
@@ -130,13 +133,10 @@ body {
 }
 
 .work-img {
-  cursor: pointer;
   display: block;
   float: left;
   opacity: 0.7;
-  margin-left: 100px;
-  /* margin-top: 80px; */
-  margin-bottom: 80px;
+  margin: 0 0 80px 100px;
   transition: 0.3s;
 }
 
@@ -158,20 +158,15 @@ body {
 .work-content-bottom {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 90px;
+  margin: 90px auto 0;
 }
 
 .work-content-text {
   color: #4e4e4e;
   font-weight: 300;
-  padding-right: 90px;
+  margin-right: 90px;
   text-align: center;
-}
-
-.mail-container {
-  display: table-cell;
-  vertical-align: middle;
+  width: 500px;
 }
 
 .mail-btn {
@@ -208,8 +203,7 @@ body {
 }
 
 .skill-container {
-  margin: 0 auto;
-  margin-top: 70px;
+  margin: 70px auto 0;
   text-align: center;
 }
 
@@ -310,8 +304,7 @@ body {
 
   .text-area {
     display: block;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
     width: 100%;
   }
 
